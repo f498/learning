@@ -1,9 +1,20 @@
+const USD = '$';
+const RUB = 'руб';
+
 const isConvertible = (current, target) => {
-    if (current === '$' || current === 'руб') {
+    if (current === USD && target === RUB) {
         return true;
     }
 
-    if (target === 'руб' || target === '$') {
+    if (current === RUB && target === USD) {
+        return true;
+    }
+
+    if (current === USD && target === USD) {
+        return true;
+    }
+
+    if (current === RUB && target === RUB) {
         return true;
     }
 
@@ -25,11 +36,11 @@ const convertCurrency = (currency, current, target) => {
         return currency;
     }
 
-    if (target === '$') {
+    if (target === 'USD') {
         return currency / rate;
     }
 
-    if (target === 'руб') {
+    if (target === 'RUB') {
         return currency * rate;
     }
 

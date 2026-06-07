@@ -36,11 +36,11 @@ const convertCurrency = (currency, current, target) => {
         return currency;
     }
 
-    if (target === 'USD') {
+    if (target === USD) {
         return currency / rate;
     }
 
-    if (target === 'RUB') {
+    if (target === RUB) {
         return currency * rate;
     }
 

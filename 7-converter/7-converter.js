@@ -1,9 +1,9 @@
 const isConvertible = (current, target) => {
-    if (current === '$' || target !== 'руб') {
+    if (current === '$' || current === 'руб') {
         return true;
     }
 
-    if (current === 'руб' || target !== '$') {
+    if (target === 'руб' || target === '$') {
         return true;
     }
 

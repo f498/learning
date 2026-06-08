@@ -1,4 +1,4 @@
-const getCryptPass = (password) => {
+const crypto = (password) => {
     password = password.split("");
     const firstHalf = password.splice(0, Math.floor(password.length / 2));
 
@@ -6,5 +6,5 @@ const getCryptPass = (password) => {
 }
 
 const check = (cryptPass, password) => {
-    return getCryptPass(cryptPass) === password;
+    return cryptPass === crypto(password);
 }
